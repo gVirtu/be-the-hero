@@ -1,8 +1,11 @@
 import React from 'react';
+import Logon from './pages/Logon';
+
+import './global.scss';
 
 function App() {
   return (
-    <h1>Hello World</h1>
+    <Logon />
   );
 }
 
