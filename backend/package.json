@@ -2,12 +2,12 @@
   "name": "be-the-hero-backend",
   "version": "0.0.1",
   "description": "Backend for 'Be The Hero' project",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "start": "nodemon src/index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Giancarlo De Roberto",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
