@@ -10,6 +10,12 @@ routes.get('/', (_request, response) => {
   });
 });
 
+routes.get('/ngos', async (request, response) => {
+  const results = await connection('ngos').select('*');
+
+  return response.json(results);
+})
+
 routes.post('/ngos', async (request, response) => {
   const { name, email, whatsapp, city, uf } = request.body;
   const id = crypto.randomBytes(4).toString('HEX');
