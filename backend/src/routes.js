@@ -2,6 +2,7 @@ const express = require('express');
 const ngoController = require('./controllers/ngoController');
 const profileController = require('./controllers/profileController');
 const incidentController = require('./controllers/incidentController');
+const sessionController = require('./controllers/sessionController');
 
 const routes = express.Router();
 
@@ -10,6 +11,8 @@ routes.get('/', (_request, response) => {
     message: 'Hello world!'
   });
 });
+
+routes.post('/sessions', sessionController.create);
 
 routes.get('/ngos', ngoController.index);
 routes.post('/ngos', ngoController.create);
