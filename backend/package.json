@@ -4,7 +4,7 @@
   "description": "Backend for 'Be The Hero' project",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon src/index.js"
   },
   "keywords": [],
   "author": "",
