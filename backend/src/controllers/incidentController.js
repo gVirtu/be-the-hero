@@ -9,7 +9,15 @@ module.exports = {
     const [count] = await connection('incidents').count();
 
     const incidents = await connection('incidents')
-      .select('*')
+      .select([
+        'incidents.*',
+        'ngos.name',
+        'ngos.email',
+        'ngos.whatsapp',
+        'ngos.city',
+        'ngos.uf'
+      ])
+      .join('ngos', 'ngos.id', '=', 'incidents.ngo_id')
       .limit(PAGE_SIZE)
       .offset((page - 1) * PAGE_SIZE);
 
