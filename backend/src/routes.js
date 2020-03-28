@@ -1,5 +1,6 @@
 const express = require('express');
 const ngoController = require('./controllers/ngoController');
+const profileController = require('./controllers/profileController');
 const incidentController = require('./controllers/incidentController');
 
 const routes = express.Router();
@@ -12,6 +13,8 @@ routes.get('/', (_request, response) => {
 
 routes.get('/ngos', ngoController.index);
 routes.post('/ngos', ngoController.create);
+
+routes.get('/profile', profileController.index);
 
 routes.get('/incidents', incidentController.index);
 routes.post('/incidents', incidentController.create);
